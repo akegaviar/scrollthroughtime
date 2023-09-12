@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web > Web 2.0 > Web3</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="sticky-bar">
+    <div>Web</div>
+    <div>Web 2.0</div>
+    <div>Web3</div>
+  </div>
+  <div>
+    <div class="grid" id="grid">
+    </div>
+  </div>
+  <div id="row-indicator"></div>
+
+  <script>
+    function generateDates() {
+      const startDate = new Date('October 1, 1968');
+      const endDate = new Date('March 31, 2024');
+      const dates = [];
+
+      for (let d = startDate; d <= endDate;) {
+        dates.push(new Date(d));
+        const currentMonth = d.getMonth();
+        do {
+          d.setDate(d.getDate() + 1);
+        } while (d.getMonth() === currentMonth);
+      }
+
+      return dates;
+    }
+
+    function formatDate(date) { 
+      return date.toLocaleString('default', { month: 'long', year: 'numeric' });
+    }
+
+    function scrollToBottom(gridHeight) {
+      window.scrollTo(0, gridHeight);
+    }
+
+    function getImageForDate(date) {
+      if (date.getFullYear() === 1968 && date.getMonth() === 10) {
+        return 'assets/ipfsLogo.png';
+      }
+      if (date.getFullYear() === 1969 && date.getMonth() === 3) {
+        return 'assets/historyApril1969.png';
+      }
+      if (date.getFullYear() === 1969 && date.getMonth() === 10) {
+        return 'assets/messageOctober1969.png';
+      }
+      if (date.getFullYear() === 1971 && date.getMonth() === 11) {
+        return 'assets/emailDecember1971.png';
+      }
+      if (date.getFullYear() === 1972 && date.getMonth() === 10) {
+        return 'assets/conferenceOctober1972.png';
+      }
+      if (date.getFullYear() === 1973 && date.getMonth() === 11) {
+        return 'assets/ethernetDecember1973.png';
+      }
+      if (date.getFullYear() === 1974 && date.getMonth() === 10) {
+        return 'assets/tcpOctober1974.png';
+      }
+      if (date.getFullYear() === 1976 && date.getMonth() === 10) {
+        return 'assets/queenOctober1976.png';
+      }
+      if (date.getFullYear() === 1979 && date.getMonth() === 9) {
+        return 'assets/ispOctober1979.png';
+      }
+      if (date.getFullYear() === 1980 && date.getMonth() === 2) {
+        return 'assets/usenetMarch1980.png';
+      }
+      if (date.getFullYear() === 1983 && date.getMonth() === 0) {
+        return 'assets/arpanetJanuary1983.png';
+      }
+      if (date.getFullYear() === 1989 && date.getMonth() === 2) {
+        return 'assets/timMarch1989.png';
+      }
+      if (date.getFullYear() === 1990 && date.getMonth() === 10) {
+        return 'assets/webserverOctober1990.png';
+      }
+      if (date.getFullYear() === 1991 && date.getMonth() === 7) {
+        return 'assets/wwwAugust1991.png';
+      }
+      if (date.getFullYear() === 1993 && date.getMonth() === 3) {
+        return 'assets/mosaicApril1993.png';
+      }
+      if (date.getFullYear() === 1994 && date.getMonth() === 4) {
+        return 'assets/pizzaJune1994.png';
+      }
+      if (date.getFullYear() === 1994 && date.getMonth() === 10) {
+        return 'assets/netscapeIOctober1994.png';
+      }
+      if (date.getFullYear() === 1995 && date.getMonth() === 10) {
+        return 'assets/explorerOctober1995.png';
+      }
+      if (date.getFullYear() === 1998 && date.getMonth() === 10) {
+        return 'assets/icannOctober1998.png';
+      }
+      if (date.getFullYear() === 1999 && date.getMonth() === 10) {
+        return 'assets/web2October1999.png';
+      }
+      if (date.getFullYear() === 2000 && date.getMonth() === 10) {
+        return 'assets/dotcomOctober2000.png';
+      }
+      if (date.getFullYear() === 2003 && date.getMonth() === 8) {
+        return 'assets/wordpressOctober2003.png';
+      }
+      if (date.getFullYear() === 2004 && date.getMonth() === 1) {
+        return 'assets/facebookMarch2004.png';
+      }
+      if (date.getFullYear() === 2004 && date.getMonth() === 6) {
+        return 'assets/gmailJuly2004.png';
+      }
+      if (date.getFullYear() === 2005 && date.getMonth() === 1) {
+        return 'assets/youtubeFebruary2005.png';
+      }
+      if (date.getFullYear() === 2006 && date.getMonth() === 3) {
+        return 'assets/twitterMarch2006.png';
+      }
+      if (date.getFullYear() === 2007 && date.getMonth() === 6) {
+        return 'assets/iphoneJuly2007.png';
+      }
+      if (date.getFullYear() === 2008 && date.getMonth() === 3) {
+        return 'assets/appstoreApril2008.png';
+      }
+      if (date.getFullYear() === 2009 && date.getMonth() === 1) {
+        return 'assets/bitcoinFebruary2009.png';
+      }
+      if (date.getFullYear() === 2010 && date.getMonth() === 4) {
+        return 'assets/pizzaMay2010.png';
+      }
+      if (date.getFullYear() === 2011 && date.getMonth() === 3) {
+        return 'assets/litecoinApril2011.png';
+      }
+      if (date.getFullYear() === 2013 && date.getMonth() === 10) {
+        return 'assets/ethereumOctober2013.png';
+      }
+      if (date.getFullYear() === 2014 && date.getMonth() === 7) {
+        return 'assets/ethereumICOAugust2014.png';
+      }
+      if (date.getFullYear() === 2015 && date.getMonth() === 1) {
+        return 'assets/ipfsFebruary2015.png';
+      }
+      if (date.getFullYear() === 2015 && date.getMonth() === 6) {
+        return 'assets/ethereumJuly2015.png';
+      }
+      if (date.getFullYear() === 2016 && date.getMonth() === 1) {
+        return 'assets/hyperledgerFebruary2016.png';
+      }
+      if (date.getFullYear() === 2017 && date.getMonth() === 10) {
+        return 'assets/icoOctober2017.png';
+      }
+      if (date.getFullYear() === 2018 && date.getMonth() === 10) {
+        return 'assets/uniswapNovember2018.png';
+      }
+      if (date.getFullYear() === 2020 && date.getMonth() === 6) {
+        return 'assets/graphDecember2020.png';
+      }
+      if (date.getFullYear() === 2020 && date.getMonth() === 11) {
+        return 'assets/starkexFebruary2021.png';
+      }
+      if (date.getFullYear() === 2021 && date.getMonth() === 4) {
+        return 'assets/arbitrumAugust2021.png';
+      }
+      if (date.getFullYear() === 2021 && date.getMonth() === 10) {
+        return 'assets/optimismDecember2021.png';
+      }
+      if (date.getFullYear() === 2022 && date.getMonth() === 3) {
+        return 'assets/starknetMarch2022.png';
+      }
+      if (date.getFullYear() === 2023 && date.getMonth() === 3) {
+        return 'assets/zksyncMarch2023.png';
+      }
+      if (date.getFullYear() === 2023 && date.getMonth() === 8) {
+        return 'assets/baseAugust2023.png';
+      }
+      return null;
+    }
+
+    function createGrid() {
+        const grid = document.getElementById('grid');
+        const dates = generateDates();
+        const gridHeight = (dates.length - 1) * 80;
+        grid.style.height = gridHeight + 'px';
+
+        // Decide how many cells per row
+        const cellsPerRow = 20;
+
+        dates.forEach((date, index) => {
+            const row = document.createElement('div');
+            row.classList.add('grid__row');
+            row.style.bottom = (index * 80) + 'px';
+
+            // Create cells
+            for (let i = 0; i < cellsPerRow; i++) {
+                const cell = document.createElement('div');
+                cell.classList.add('grid__cell');
+
+                // Shift the date index up by 1 when checking the conditions
+                const shiftedIndex = index - 1;
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2006 && dates[shiftedIndex].getFullYear() <= 2024) && i < 5) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/pcLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.2';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 1981 && dates[shiftedIndex].getFullYear() <= 2005) && i < 24) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/pcLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.2';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2006 && dates[shiftedIndex].getFullYear() <= 2007) && i >= 5 && i < 24) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/awsLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.2';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2008 && dates[shiftedIndex].getFullYear() <= 2024) && i >= 5 && i < 8) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/awsLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.2';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2008 && dates[shiftedIndex].getFullYear() <= 2009) && i >= 8 && i < 24) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/gcpLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.2';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2010 && dates[shiftedIndex].getFullYear() <= 2024) && i >= 8 && i < 11) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/gcpLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.2';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2010 && dates[shiftedIndex].getFullYear() <= 2015) && i >= 11 && i < 24) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/azureLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.2';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2016 && dates[shiftedIndex].getFullYear() <= 2024) && i >= 11 && i < 14) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/azureLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.2';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2016 && dates[shiftedIndex].getFullYear() <= 2018) && i >= 14 && i < 24) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/infuraLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.3';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2019 && dates[shiftedIndex].getFullYear() <= 2024) && i >= 14 && i < 16) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/infuraLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.3';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2019 && dates[shiftedIndex].getFullYear() <= 2024) && i >= 16 && i < 18) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/alchemyLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.3';
+                    cell.appendChild(img);
+                }
+
+                if (shiftedIndex >= 0 && (dates[shiftedIndex].getFullYear() >= 2019 && dates[shiftedIndex].getFullYear() <= 2024) && i >= 18 && i < 22) {
+                    const img = document.createElement('img');
+                    img.src = 'assets/chainstackLogo.png';
+                    img.style.width = '100%';
+                    img.style.height = '100%';
+                    img.style.objectFit = 'contain';
+                    img.style.opacity = '0.3';
+                    cell.appendChild(img);
+                }
+
+                row.appendChild(cell);
+            }
+
+            const dateText = document.createElement('p');
+            dateText.classList.add('grid__date');
+            dateText.textContent = formatDate(date);
+            row.appendChild(dateText);
+
+            const imageName = getImageForDate(date);
+            if (imageName) {
+                const img = document.createElement('img');
+                img.src = imageName;
+                
+                const imgContainer = document.createElement('div');
+                imgContainer.appendChild(img);
+                imgContainer.classList.add('grid__image');
+
+                const contentDiv = document.createElement('div');
+                contentDiv.classList.add('grid__content');
+
+                if (imageName === 'assets/historyApril1969.png') {
+                  imgContainer.classList.add('grid__image--april1969');
+
+                  const textContainer = document.createElement('div');
+                  textContainer.classList.add('grid__image__history');
+
+                  const textPart1 = document.createElement('p');
+                  textPart1.textContent = "Scroll up to see how Web1 morphed into Web2 and into Web3. I keep the original names for the web stages: Web, Web 2.0, and Web3.";
+                  textContainer.appendChild(textPart1);
+
+                  const textPart2 = document.createElement('p');
+                  textPart2.textContent = "The logos in the background represent the infrastructure changes supporting the web.";
+                  textContainer.appendChild(textPart2);
+
+                  const textPart3 = document.createElement('p');
+                  textPart3.textContent = "This little IPFS project is visual aid for me when I explain what Web3 infrastructure is and why.";
+                  textContainer.appendChild(textPart3);
+
+
+                  const textPart4 = document.createElement('p');
+                  textPart4.textContent = "Feel free to ";
+                  textContainer.appendChild(textPart4);
+
+                  const link = document.createElement('a');
+                  link.href = 'https://ake.eth.limo/';
+                  link.target = '_blank';
+                  link.textContent = 'shoot me a message.';
+                  textPart4.appendChild(link);
+
+                  const textPart5 = document.createElement('p');
+                  textPart5.textContent = "Check the ";
+                  textContainer.appendChild(textPart5);
+
+                  const linkRepo = document.createElement('a');
+                  linkRepo.href = 'https://github.com/akegaviar/scrollthroughtime';
+                  linkRepo.target = '_blank';
+                  linkRepo.textContent = 'GitHub repository.';
+                  textPart5.appendChild(linkRepo);
+
+
+                  imgContainer.appendChild(textContainer);
+                }
+
+                if (imageName === 'assets/ipfsLogo.png') {
+                  imgContainer.classList.add('grid__image--october1968');
+                }
+
+                if (imageName === 'assets/messageOctober1969.png') {
+                  imgContainer.classList.add('grid__image--october1969');
+                }
+
+                if (imageName === 'assets/emailDecember1971.png') {
+                  imgContainer.classList.add('grid__image--december1971');
+                }
+
+                if (imageName === 'assets/conferenceOctober1972.png') {
+                  imgContainer.classList.add('grid__image--october1972');
+                }
+
+                if (imageName === 'assets/tcpOctober1974.png') {
+                  imgContainer.classList.add('grid__image--october1974');
+                }
+
+                if (imageName === 'assets/ethernetDecember1973.png') {
+                  imgContainer.classList.add('grid__image--december1973');
+                }
+
+                if (imageName === 'assets/queenOctober1976.png') {
+                  imgContainer.classList.add('grid__image--october1976');
+                }
+
+                if (imageName === 'assets/ispOctober1979.png') {
+                  imgContainer.classList.add('grid__image--october1979');
+                }
+
+                if (imageName === 'assets/usenetMarch1980.png') {
+                  imgContainer.classList.add('grid__image--march1980');
+                }
+
+                if (imageName === 'assets/arpanetJanuary1983.png') {
+                  imgContainer.classList.add('grid__image--january1983');
+                }
+
+                if (imageName === 'assets/timMarch1989.png') {
+                  imgContainer.classList.add('grid__image--march1989');
+                }
+
+                if (imageName === 'assets/webserverOctober1990.png') {
+                  imgContainer.classList.add('grid__image--october1990');
+                }
+
+                if (imageName === 'assets/wwwAugust1991.png') {
+                  imgContainer.classList.add('grid__image--august1991');
+                }
+
+                if (imageName === 'assets/mosaicApril1993.png') {
+                  imgContainer.classList.add('grid__image--april1993');
+                }
+
+                if (imageName === 'assets/pizzaJune1994.png') {
+                  imgContainer.classList.add('grid__image--june1994');
+                }
+
+                if (imageName === 'assets/netscapeIOctober1994.png') {
+                  imgContainer.classList.add('grid__image--october1994');
+                }
+
+                if (imageName === 'assets/explorerOctober1995.png') {
+                  imgContainer.classList.add('grid__image--october1995');
+                }
+
+                if (imageName === 'assets/icannOctober1998.png') {
+                  imgContainer.classList.add('grid__image--october1998');
+                }
+
+                if (imageName === 'assets/web2October1999.png') {
+                  imgContainer.classList.add('grid__image--october1999');
+                }
+
+                if (imageName === 'assets/dotcomOctober2000.png') {
+                  imgContainer.classList.add('grid__image--october2000');
+                }
+
+                if (imageName === 'assets/wordpressOctober2003.png') {
+                  imgContainer.classList.add('grid__image--october2003');
+                }
+
+                if (imageName === 'assets/facebookMarch2004.png') {
+                  imgContainer.classList.add('grid__image--march2004');
+                }
+
+                if (imageName === 'assets/gmailJuly2004.png') {
+                  imgContainer.classList.add('grid__image--july2004');
+                }
+
+                if (imageName === 'assets/youtubeFebruary2005.png') {
+                  imgContainer.classList.add('grid__image--february2005');
+                }
+
+                if (imageName === 'assets/twitterMarch2006.png') {
+                  imgContainer.classList.add('grid__image--march2006');
+                }
+
+                if (imageName === 'assets/iphoneJuly2007.png') {
+                  imgContainer.classList.add('grid__image--july2007');
+                }
+
+                if (imageName === 'assets/appstoreApril2008.png') {
+                  imgContainer.classList.add('grid__image--april2008');
+                }
+
+                if (imageName === 'assets/bitcoinFebruary2009.png') {
+                  imgContainer.classList.add('grid__image--february2009');
+                }
+
+                if (imageName === 'assets/pizzaMay2010.png') {
+                  imgContainer.classList.add('grid__image--may2010');
+                }
+
+                if (imageName === 'assets/litecoinApril2011.png') {
+                  imgContainer.classList.add('grid__image--april2011');
+                }
+
+                if (imageName === 'assets/ethereumOctober2013.png') {
+                  imgContainer.classList.add('grid__image--october2013');
+                }
+
+                if (imageName === 'assets/ethereumICOAugust2014.png') {
+                  imgContainer.classList.add('grid__image--august2014');
+                }
+
+                if (imageName === 'assets/ipfsFebruary2015.png') {
+                  imgContainer.classList.add('grid__image--february2015');
+                }
+
+                if (imageName === 'assets/ethereumJuly2015.png') {
+                  imgContainer.classList.add('grid__image--july2015');
+                }
+
+                if (imageName === 'assets/hyperledgerFebruary2016.png') {
+                  imgContainer.classList.add('grid__image--february2016');
+                }
+
+                if (imageName === 'assets/icoOctober2017.png') {
+                  imgContainer.classList.add('grid__image--october2017');
+                }
+
+                if (imageName === 'assets/uniswapNovember2018.png') {
+                  imgContainer.classList.add('grid__image--november2018');
+                }
+
+                if (imageName === 'assets/graphDecember2020.png') {
+                  imgContainer.classList.add('grid__image--december2020');
+                }
+
+                if (imageName === 'assets/starkexFebruary2021.png') {
+                  imgContainer.classList.add('grid__image--february2021');
+                }
+
+                if (imageName === 'assets/arbitrumAugust2021.png') {
+                  imgContainer.classList.add('grid__image--august2021');
+                }
+
+                if (imageName === 'assets/optimismDecember2021.png') {
+                  imgContainer.classList.add('grid__image--december2021');
+                }
+
+                if (imageName === 'assets/starknetMarch2022.png') {
+                  imgContainer.classList.add('grid__image--march2022');
+                }
+
+                if (imageName === 'assets/zksyncMarch2023.png') {
+                  imgContainer.classList.add('grid__image--march2023');
+                }
+
+                if (imageName === 'assets/baseAugust2023.png') {
+                  imgContainer.classList.add('grid__image--august2023');
+                }
+
+                row.appendChild(imgContainer);
+            }
+
+            grid.appendChild(row);
+        });
+
+        return gridHeight;
+    }
+
+    const gridHeight = createGrid();
+    scrollToBottom(gridHeight);
+
+    const rowIndicator = document.getElementById('row-indicator');
+    const grid = document.getElementById('grid');
+    const rows = grid.children;
+
+    let currentRow;
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const scrollMiddle = scrollTop + window.innerHeight / 2;
+      const gridTop = grid.offsetTop;
+      const gridBottom = gridTop + grid.offsetHeight;
+
+      let closestRow;
+      let closestDistance = Infinity;
+
+      for (let i = 0; i < rows.length; i++) {
+        const row = rows[i];
+        const rowTop = row.offsetTop;
+        const rowBottom = rowTop + row.offsetHeight;
+        const rowMiddle = rowTop + row.offsetHeight / 2;
+
+        const distance = Math.abs(rowMiddle - scrollMiddle);
+
+        if (distance < closestDistance) {
+          closestRow = row;
+          closestDistance = distance;
+        }
+      }
+
+      if (closestRow) {
+        const date = closestRow.querySelector('.grid__date').textContent;
+        rowIndicator.textContent = date;
+      }
+    });
+  </script>
+</body>
+</html>

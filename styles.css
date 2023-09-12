@@ -1,0 +1,1245 @@
+    .grid {
+        position: relative;
+        z-index: 0;
+    }
+  
+    .grid__date {
+        display: none;
+    }
+  
+    .grid__row {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+    }
+  
+    .grid__cell {
+        width: 80px;
+        height: 80px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+    }
+  
+    .grid__extras {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+  
+    .grid__button {
+        background-color: green;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 4px;
+    }
+  
+    .grid__image img {
+        width: 400px;
+        height: auto;
+    }
+  
+    .grid__image--october1968 {
+        position: absolute;
+        left: 40%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+  
+    .grid__image--april1969 {
+        position: absolute;
+        left: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+  
+    .grid__image--october1969 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+  
+    .grid__image--december1971 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+  
+    .grid__image--october1972 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+  
+    .grid__image--december1973 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+  
+    .grid__image--october1974 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+  
+      .grid__image--october1976 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october1979 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--march1980 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--january1983 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--march1989 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october1990 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--august1991 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--april1993 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--june1994 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october1994 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october1995 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october1998 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october1999 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october2000 {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october2003 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--march2004 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--july2004 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--february2005 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--march2006 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--july2007 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--april2008 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--february2009 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--may2010 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--april2011 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october2013 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--august2014 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--february2015 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--july2015 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--february2016 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october2017 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--november2018 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--december2020 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--february2021 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--august2021 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--december2021 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--march2022 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--march2023 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--august2023 {
+        position: absolute;
+        right: -10%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+  
+      .grid__image--october1968 .grid__image__text {
+        position: absolute;
+        right: -400px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 24px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+      }
+  
+      .grid__image--october1968 img {
+        width: 200px;  /* Adjust this to change the width */
+        height: auto;  /* Adjust this to maintain the aspect ratio */
+      }
+  
+      .grid__image__history {
+        position: absolute;
+        left: calc(30% + 80%);
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 20px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        width: 800px;
+        height: auto;
+      }
+  
+      .grid__image--october1968::before {
+        content: 'Serving off IPFS.';
+        position: absolute;
+        right: -150px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+      }
+  
+      .grid__image--october1969::before {
+        content: 'The first message is sent over ARPANET.';
+        position: absolute;
+        right: -390px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+      }
+  
+      .grid__image--december1971::before {
+        content: 'The first email program, called "ARPANET Mail,"\A is developed by Ray Tomlinson.';
+        position: absolute;
+        right: -430px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october1972::before {
+        content: 'The first International Conference on Computer Communications (ICCC) is held,\A where the term "internet" is used for the first time.';
+        position: absolute;
+        right: -790px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.96);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--december1973::before {
+        content: 'Robert Metcalfe develops Ethernet, a local area networking (LAN) technology\A that becomes widely adopted.';
+        position: absolute;
+        right: -790px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october1974::before {
+        content: 'Vint Cerf and Bob Kahn publish "A Protocol for Packet Network Intercommunication,"\A which defines the Transmission Control Protocol (TCP), a foundational protocol of the internet.';
+        position: absolute;
+        right: -900px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october1976::before {
+        content: 'Queen Elizabeth II sends the first royal email.';
+        position: absolute;
+        right: -500px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october1979::before {
+        content: 'The first Internet Service Providers (ISPs), such as CompuServe and The Source,\A begin offering dial-up access to the internet for personal computers.';
+        position: absolute;
+        right: -790px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--march1980::before {
+        content: 'Usenet, a distributed discussion system,\A is created by Tom Truscott, Jim Ellis, and Steve Bellovin.';
+        position: absolute;
+        right: -600px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--january1983::before {
+        content: 'ARPANET switches from Network Control Protocol (NCP)\A to Transmission Control Protocol/Internet Protocol (TCP/IP)\A as its standard protocol.';
+        position: absolute;
+        right: -600px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--march1989::before {
+        content: 'Tim Berners-Lee proposes a system for information management\A known as the HTTP & World Wide Web.';
+        position: absolute;
+        right: -550px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october1990::before {
+        content: 'The first web server, "info.cern.ch," goes online at CERN.';
+        position: absolute;
+        right: -550px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--august1991::before {
+        content: 'The public gains access to the World Wide Web for the first time\A as CERN makes the World Wide Web project available to everyone.';
+        position: absolute;
+        right: -650px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--april1993::before {
+        content: 'The web browser Mosaic, developed by Marc Andreessen and his team,\A is released, introducing a more user-friendly interface to the web.';
+        position: absolute;
+        right: -650px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--june1994::before {
+        content: 'One of the first known Web purchases takes place:\A a pepperoni pizza with mushrooms and extra cheese from Pizza Hut.';
+        position: absolute;
+        right: -650px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october1994::before {
+        content: 'Netscape Communications Corporation is founded by Marc Andreessen and Jim Clark,\A leading to the release of the Netscape Navigator web browser.';
+        position: absolute;
+        right: -790px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october1995::before {
+        content: 'Microsoft releases Internet Explorer as a competitor to Netscape Navigator.';
+        position: absolute;
+        right: -750px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october1998::before {
+        content: 'The Internet Corporation for Assigned Names and Numbers (ICANN) is established\A to oversee the management of domain names and IP addresses.';
+        position: absolute;
+        right: -790px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october1999::before {
+        content: 'The term Web 2.0 is coined by information architecture consultant Darcy DiNucci\A to differentiate the post-dot-com bubble.';
+        position: absolute;
+        right: -790px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october2000::before {
+        content: 'The dot-com bubble bursts, leading to a decline in internet-related stocks and companies.';
+        position: absolute;
+        right: -820px;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october2003::before {
+        content: 'The popular blogging platform WordPress is\A launched by Matt Mullenweg and Mike Little.';
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--march2004::before {
+        content: 'Facebook is launched by Mark Zuckerberg,\A initially for Harvard University students.';
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--july2004::before {
+        content: 'Google launches its webmail service, Gmail.';
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--february2005::before {
+        content: 'YouTube is launched.';
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--march2006::before {
+        content: 'Twitter is launched.';
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--july2007::before {
+        content: 'iPhone is launched.';
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--april2008::before {
+        content: 'App Store is launched.';
+        position: absolute;
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--february2009::before {
+        content: 'Bitcoin genesis block is mined.';
+        position: absolute;
+        right: 60%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--may2010::before {
+        content: '10k Bitcoin pizza. First real transaction.';
+        position: absolute;
+        right: 50%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--april2011::before {
+        content: 'First altcoin is launched.';
+        position: absolute;
+        right: 60%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october2013::before {
+        content: 'Ethereum is proposed.';
+        position: absolute;
+        right: 70%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--august2014::before {
+        content: 'Ethereum crowdfunding campaign concludes.';
+        position: absolute;
+        right: 60%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--february2015::before {
+        content: 'The InterPlanetary File System (IPFS) is introduced.';
+        position: absolute;
+        right: 30%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--july2015::before {
+        content: 'Ethereum mainnet goes live.';
+        position: absolute;
+        right: 50%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--february2016::before {
+        content: 'The Hyperledger project starts.';
+        position: absolute;
+        right: 60%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--october2017::before {
+        content: 'ICOs on Ethereum explode.';
+        position: absolute;
+        right: 60%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--november2018::before {
+        content: 'Uniswap v1 is deployed on the Ethereum mainnet.';
+        position: absolute;
+        right: 30%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--december2020::before {
+        content: 'The Graph protocol launches.';
+        position: absolute;
+        right: 60%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--february2021::before {
+        content: 'dYdX launches perpetuals on StarkEx,\A a specialized L2.';
+        position: absolute;
+        right: 50%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--august2021::before {
+        content: 'Arbitrum launches mainnet,\A a general optimistic L2.';
+        position: absolute;
+        right: 70%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--december2021::before {
+        content: 'Optimism open mainnet launches,\A a general optimistic L2.';
+        position: absolute;
+        right: 70%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--march2022::before {
+        content: 'Starknet alpha mainnet launched,\A a general ZK L2.';
+        position: absolute;
+        right: 60%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--march2023::before {
+        content: 'zkSync Era mainnet launched,\A a general ZK L2.';
+        position: absolute;
+        right: 70%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      .grid__image--august2023::before {
+        content: 'Base mainnet launched,\A a general optimistic L2.';
+        position: absolute;
+        right: 75%;
+        top: 40%;
+        transform: translateX(-50%);
+        padding: 8px;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 10px;
+        border: 2px solid black;
+        font-weight: bold;
+        font-size: 16px;
+        font-family: "Courier New", monospace;
+        z-index: 1;
+        white-space: pre;
+      }
+  
+      #row-indicator {
+        position: fixed;
+        top: 50%;
+        left: 6%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid black;
+        background-color: rgba(255, 255, 255, 0.6);
+        z-index: 1;
+        font-family: "Courier New", Courier, monospace;
+        font-weight: bold;
+        font-size: 20px;
+      }
+  
+      .sticky-bar {
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px 0;
+        font-weight: bold;
+        font-size: 22px;
+        font-family: "Courier New", monospace;
+        z-index: 1000;
+        border-bottom: 1px solid #ccc;
+      }
+  
+      .sticky-bar div {
+        text-align: center;
+        flex: 1;
+      }
+
+      @media screen and (max-width: 600px) {
+        .grid__image::before {
+          font-size: 12px;
+          right: -400px;
+        }
+      }
+      
+      @media screen and (max-width: 480px) {
+        .grid__image::before {
+          font-size: 10px;
+          right: -300px;
+        }
+      }
+      
+      @media screen and (max-width: 360px) {
+        .grid__image::before {
+          font-size: 8px;
+          right: -200px;
+        }
+      }
