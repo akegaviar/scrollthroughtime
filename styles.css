@@ -36,14 +36,14 @@
         background-color: green;
         color: white;
         border: none;
-        padding: 5px 10px;
+        padding: 0.5rem 1rem;
         cursor: pointer;
         font-size: 14px;
         border-radius: 4px;
     }
   
     .grid__image img {
-        width: 400px;
+        width: 50%;
         height: auto;
     }
   
@@ -328,6 +328,7 @@
       }
   
       .grid__image--february2016 {
+        position: relative;
         position: absolute;
         right: -10%;
         top: 50%;
@@ -423,7 +424,7 @@
       }
   
       .grid__image--october1968 img {
-        width: 200px;  /* Adjust this to change the width */
+        width: 25%;  /* Adjust this to change the width */
         height: auto;  /* Adjust this to maintain the aspect ratio */
       }
   
@@ -567,7 +568,7 @@
         right: -790px;
         top: 50%;
         transform: translateY(-50%);
-        padding: 8px;
+        padding: 0.8rem;
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 10px;
         border: 2px solid black;
@@ -1065,7 +1066,7 @@
         border-radius: 10px;
         border: 2px solid black;
         font-weight: bold;
-        font-size: 16px;
+        font-size: 1rem;
         font-family: "Courier New", monospace;
         z-index: 1;
         white-space: pre;
@@ -1074,10 +1075,10 @@
       .grid__image--december2020::before {
         content: 'The Graph protocol launches.';
         position: absolute;
-        right: 60%;
+        right: 50%;
         top: 40%;
         transform: translateX(-50%);
-        padding: 8px;
+        padding: 0.8rem;
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 10px;
         border: 2px solid black;
@@ -1091,10 +1092,10 @@
       .grid__image--february2021::before {
         content: 'dYdX launches perpetuals on StarkEx,\A a specialized L2.';
         position: absolute;
-        right: 50%;
+        right: 40%;
         top: 40%;
         transform: translateX(-50%);
-        padding: 8px;
+        padding: 0.8rem;
         background-color: rgba(255, 255, 255, 0.7);
         border-radius: 10px;
         border: 2px solid black;
@@ -1108,7 +1109,7 @@
       .grid__image--august2021::before {
         content: 'Arbitrum launches mainnet,\A a general optimistic L2.';
         position: absolute;
-        right: 70%;
+        right: 60%;
         top: 40%;
         transform: translateX(-50%);
         padding: 8px;
@@ -1194,7 +1195,7 @@
         position: fixed;
         top: 50%;
         left: 6%;
-        padding: 10px;
+        padding: 1rem;
         border-radius: 10px;
         border: 2px solid black;
         background-color: rgba(255, 255, 255, 0.6);
@@ -1210,10 +1211,42 @@
         position: sticky;
         top: 0;
         background-color: rgba(255, 255, 255, 0.7);
-        padding: 10px 0;
+        padding: 1rem 0;
         font-weight: bold;
         font-size: 22px;
-        font-family: "Courier New", monospace;
+@media screen and (max-width: 320px) {
+  .grid__image img {
+    width: 100%; /* full width */
+  }
+  .grid__image::before {
+    font-size: 0.5rem; /* adjust font size */
+  }
+}@media screen and (max-width: 375px) {
+  .grid__image img {
+    width: 100%; /* full width */
+  }
+  .grid__image::before {
+    font-size: 0.5rem; /* adjust font size */
+  }
+}@media screen and (max-width: 425px) {
+  .grid__image img {
+    width: 100%; /* full width */
+  }
+  .grid__image::before {
+    font-size: 0.5rem; /* adjust font size */
+  }
+}@media screen and (max-width: 768px) {
+  .grid {
+    flex-direction: column; /* stack elements vertically */
+  }
+}@media screen and (max-width: 1024px) {
+  .grid__image img {
+    width: 100%; /* full width */
+  }
+  .grid__image::before {
+    font-size: 0.75rem; /* adjust font size */
+  }
+}        font-family: "Courier New", monospace;
         z-index: 1000;
         border-bottom: 1px solid #ccc;
       }
